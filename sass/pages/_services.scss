@@ -1,0 +1,357 @@
+.borderBox{
+	border: 1px solid $white;
+	padding: 0px 60px;
+	position: relative;
+	p, li{
+		letter-spacing: 2px;
+    	line-height: 1.7;
+	}
+	p{
+    	text-align: justify;
+    	padding-bottom: 15px;
+	}
+	li{
+		list-style: none;
+		padding-bottom: 2px;
+		text-align: center;
+		@include fontSize(14);
+		letter-spacing: 1px;
+	}
+	ul{
+    	padding-bottom: 15px;
+		margin: 0;
+	}
+}
+.serviceBox{
+	.titleLine{
+		display: flex;
+		flex-flow: row nowrap;
+	}
+	h1.page-title, h2{
+		background: transparent;
+		position: relative;
+		left: 0;
+		text-align: left;
+		padding: 10px 20px;
+		white-space: nowrap;
+		flex-shrink: 0;
+	}
+	.preLine, .postLine{
+		height: 1px;
+		background: $white;
+	}
+	.preLine{
+		width: 45px;
+	}
+	.postLine{
+		width: 100%;
+	}
+		// &:after{
+		// 	width: calc(100% + 60px - 120px);
+  //   		left: 120px;
+		// }
+	.innerServiceWrapper{
+		padding: 0px 60px;
+	}
+	border: 1px solid $white;
+	border-top: none;
+	position: relative;
+	background: rgba(0,0,0, 0.7);
+	p, li{
+		letter-spacing: 2px;
+    	line-height: 1.7;
+	}
+	p{
+    	text-align: justify;
+    	padding-bottom: 15px;
+	}
+	li{
+		list-style: none;
+		padding-bottom: 2px;
+		text-align: center;
+		@include fontSize(14);
+		letter-spacing: 1px;
+	}
+	ul{
+    	padding-bottom: 15px;
+		margin: 0;
+	}
+}
+.service-page{
+	a.btn.btn2{
+		display: block;
+		margin: 0 auto 60px;
+		width: 250px;
+		text-align: center;		
+	}
+}
+section#our-services{
+	background-position: 0% 50%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-top: 140px;
+	.borderBox, .serviceBox{
+	    max-width: 45%;
+	    margin-left: 50%;
+	    top: -40px;
+	}
+	.actionBox{
+		max-width: 45%;
+	    margin-left: 50%;
+		h3{
+			text-align: center;
+		}
+		button{
+			display: block;
+			width: 300px;
+			margin: 15px auto;
+			text-align: center;
+		}
+	}
+}
+
+section#uk-weddings, section.international-weddings, section#bespoke-events{
+	h2{
+	    background: $accent;
+	    text-align: left;
+	    padding: 20px 60px;
+	    position: static;
+	    display: block;
+	    margin: 0 0 40px;
+	    border-bottom: 1px solid $white;
+	}
+	.serviceBox{
+		border-top: 1px solid $white;
+	}
+}
+
+section#uk-weddings{
+	max-width: $max-width;
+	margin: 160px auto 0;    
+	.borderBox, .serviceBox {
+		
+		.alignleft{
+			position: relative;
+		    margin-right: -150px;
+		    right: 200px;
+		}
+		.alignright{
+			position: relative;
+		    margin-left: -145px;
+		    padding-bottom: 30px;
+		    left: 200px;
+		    &:before{
+		    	top: -25px;
+    			left: -35px;
+		    }
+		}
+	}
+	.buttonBox{
+	    position: relative;
+		right: 160px;
+	}
+}
+
+
+
+section.international-weddings{
+	margin: -100px 0px 40px;
+    background-position: 600% 0%;
+    background-size: 95%;
+    background-repeat: no-repeat;
+    padding: 125px 0 40px;
+	.borderBox, .serviceBox{
+	    max-width: 45%;
+		margin-left: 5%;
+		margin-top: 200px;
+	}
+}
+.mobileImage{
+	display: none;
+}
+section#bespoke-events{
+    background-position: 0% 100%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    padding: 20px 0 350px;
+    border-bottom: 1px solid $white;
+	.borderBox, .serviceBox{
+		max-width: 35%;
+	    margin-left: 60%;
+	    top: 10px;
+	}
+    .serviceBox.modernImageStampActually:before{
+    	top: auto;
+    	bottom: -70px;
+		right: -60px;
+    	left: auto;
+    }
+}
+
+
+@media (max-width: 1200px) {
+	section#our-services {
+		background-position: -400% 50%;
+		.serviceBox{
+			max-width: 65%;
+		    margin-left: 30%;
+		    top: -20px;
+		}
+	}
+	section#uk-weddings .serviceBox .alignleft {
+	    position: relative;
+	    margin-right: -110px;
+	    right: 160px;
+	    width: 60%;
+	}
+	section#uk-weddings .serviceBox .alignright{
+		width: 70%;
+	}
+	section.international-weddings .serviceBox{
+		max-width: 65%;
+	}
+	section#bespoke-events .serviceBox {
+	    max-width: 55%;
+	    margin-left: 40%;
+	    top: 10px;
+	}
+	section#bespoke-events {
+	    background-position: 0 100%;
+	    background-size: 100%;
+	    background-repeat: no-repeat;
+	    padding: 20px 0 450px;
+	}
+}
+@media (max-width: 1080px) {
+	section#our-services {
+		margin-top: 100px;
+		// .serviceBox{
+		// 	top: 70px;
+		// }
+	}
+	section#uk-weddings .serviceBox .innerServiceWrapper {
+		padding: 0 30px;
+	}
+	section#uk-weddings .serviceBox .alignleft {
+	    position: relative;
+	    margin-right: 0px;
+	    right: 0px;
+	    width: 100%;
+	    padding-bottom: 50px;
+	}
+	section#uk-weddings .serviceBox .alignright{
+		margin-left: -70px;
+    	left: 100px;
+    	padding-bottom: 0px;
+    	p{
+    		padding-bottom: 0px;
+    		margin-bottom: 0px;
+    	}
+	    &:before{
+	    	width: 140px;
+	    	height: 140px;
+	    }
+	}
+	section.international-weddings{
+		    background-position: 600% 50%;
+	}
+}
+@media (max-width: 900px){
+	section#uk-weddings .serviceBox {
+		margin-left: 10px;
+		margin-right: 10px;
+	}
+	section#uk-weddings .serviceBox .alignright {
+    	margin-left: 30px;
+    	left: 0;
+    	width: 50%;
+	}
+	section#bespoke-events{ 
+		padding: 20px 0 250px;
+		.serviceBox {
+		    max-width: 75%;
+		    margin-left: 20%;
+		    top: -10px;
+		}
+	}
+}
+
+@media (max-width: 767px){
+	section#our-services, section#uk-weddings, section#bespoke-events, section.international-weddings {
+		.serviceBox{
+			max-width: 100%;
+		    margin-left: 15px;
+		    margin-right: 15px;
+		    top: -20px;
+		}
+	}
+	section#uk-weddings, section.international-weddings, section#bespoke-events{
+		h2{
+			padding: 20px;
+		}
+	}
+	section#our-services, section#uk-weddings, section.international-weddings {
+		background-image: none !important;
+	}
+	.mobileImage{
+		display: block;
+	}
+	.mobileImageServices{
+		margin-top: -10%;
+		position: relative;
+		z-index: -1;
+	}
+	section#our-services .actionBox{
+		max-width: initial;
+		margin-left: initial;
+		margin-top: 20px;
+	}
+	section#uk-weddings .buttonBox{
+		position: static;
+	}
+	section.international-weddings{
+		margin-top: 0px;
+		padding: 10px 0px;
+		.serviceBox{
+			margin-top: -30%;
+		}
+	}
+	section#bespoke-events .serviceBox:before{
+		bottom: -75px;
+    	right: -30px;
+	}
+}
+@media (max-width: 650px){
+	.serviceBox p, p{
+		text-align: left;
+	}
+}
+@media (max-width: 550px){
+	.serviceBox .innerServiceWrapper, section#uk-weddings .serviceBox .innerServiceWrapper{
+		padding: 0 40px;
+	}
+	section#uk-weddings .serviceBox .alignright{
+		width: 100%;
+		&:before{
+			top: -15px;
+    		left: -30px;
+		}
+	}
+}
+@media (max-width: 450px){
+	section#our-services, section#uk-weddings, section#bespoke-events, section.international-weddings {
+		.serviceBox{
+		    top: -30px;
+			.titleLine{
+				margin-bottom: -20px;
+			}
+			// p{
+			// 	text-align: left;
+			// }
+		}
+	}
+	section#bespoke-events .serviceBox:before {
+			    bottom: -125px;
+			}
+}
+

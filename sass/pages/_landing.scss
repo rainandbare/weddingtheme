@@ -1,0 +1,108 @@
+.landing{
+	#primary{
+		display: flex;
+		flex-flow: row nowrap;
+		justify-content: center;
+		align-items: center;
+		height: 100vh;
+		width: 100%;
+		background-repeat: no-repeat;
+		background-size: cover;
+
+	}
+	main{
+		width: 100%;
+		height: 100vh;
+		display: flex;
+		flex-flow: column nowrap;
+		justify-content: center;
+		align-items: center;
+	    // margin: 0 auto;
+	    text-align: center;
+	    padding: 0px 20px;
+	    background: rgba(0,0,0,0.5);
+	    .borderBox{
+	    	padding: 0;
+	    	 background: rgba(0,0,0,0.9);
+	    	 text-align: center;
+		    .comingSoonDate{
+		    	background-color: $accent;
+			    p{
+					padding: 10px 0px;
+					margin: 0;
+					text-align: center;
+					font-family: $tall;
+					@include fontSize(35);
+					letter-spacing: 7px;
+			    }
+		    } 
+	    }
+	}	
+	.site-branding{
+		@include clearfix;
+		border-bottom: 1px solid white;
+		.logo-top{
+			width: 95%;
+			padding: 4px 38px 0 35px;
+			background-color: transparent;
+		}
+		.logo-bottom{
+			background-color: transparent;
+		}
+	}
+	.imageWrapper{
+		max-width: 435px;
+		margin: 0 auto;
+	}
+	span.label{
+		display: none;
+	}
+	h5, h5.smaller{
+			margin: 0;
+			border: none;
+			a{
+				text-decoration: none;
+			}
+	}
+	.footerContactInfo{
+		margin: 20px 0 0px;
+	}
+	.footerCredits li{
+		width: 100%;
+	}
+	.borderBox ul#social_nav {
+		margin: 0 auto;
+		padding: 0;
+		li{
+			padding: 0 10px;
+		}
+	}
+}
+
+@media (max-width: 430px){
+	.landing{
+		.site-branding{
+			.logo-top{
+				@include fontSize(35);
+			    padding: 6px 26px 1px 21px;
+			    letter-spacing: 10px;
+			}
+			.logo-bottom{
+				@include fontSize(15);
+				padding: 7px 16px 7px 24px;
+			    background-color: transparent;
+			    letter-spacing: 4px;
+			}
+		}
+		main .borderBox .comingSoonDate p {
+			@include fontSize(30);
+			letter-spacing: 4px;
+		}
+	}
+	.stampItLanding:before{
+	    width: 68px;
+	    height: 68px;
+	    top: 46px;
+	    right: 194px;
+	}
+}

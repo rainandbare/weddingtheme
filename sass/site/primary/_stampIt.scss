@@ -1,0 +1,161 @@
+.stampItLeftTop{
+    position: relative;
+    &:before{
+        content: '';
+        width: 170px;
+        display: block;
+        height: 170px;
+        background-image: url(images/stamp.png);
+        background-size: 80%;
+        background-position: center center;
+        background-repeat: no-repeat;
+        position: absolute;
+        z-index: 2;
+        bottom: -100px;
+        right: -120px;
+        padding: 10px;
+        background-color: black;
+    }
+}
+
+
+.stampIt{
+    position: relative;
+    width: 160px;
+    height: 130px;
+    padding-left: 20px;
+    &:before{
+        content: '';
+        width: 130px;
+        display: block;
+        height: 130px;
+        background-image: url(images/stamp.png);
+        background-size: 100%;
+        background-position: center center;
+        background-repeat: no-repeat;
+        position: relative;
+        z-index: 2;
+        border-radius: 50%;
+        bottom: 70px;
+        background-color: $accent;
+    }
+}
+
+.stampItLanding{
+    position: relative;
+    &:before{
+        content: '';
+        width: 100px;
+        display: block;
+        height: 100px;
+        background-image: url(images/stamp2.png);
+        background-size: 107%;
+        border: 1px solid white;
+        background-position: center center;
+        background-repeat: no-repeat;
+        position: absolute;
+        background-color: #000;
+        border-radius: 50%;
+        z-index: 2;
+        top: 62px;
+        right: 283px;
+    }
+}
+
+.stampItRightTop{
+    position: relative;
+    &:before{
+        content: '';
+        width: 150px;
+        display: block;
+        height: 150px;
+        background-image: url(images/stamp.png);
+        background-size: 100%;
+        background-position: center center;
+        background-repeat: no-repeat;
+        position: absolute;
+        z-index: 2;
+        border-radius: 50%;
+        top: -30px;
+        right: -90px;
+        background-color:$accent;
+    }
+}
+.stampItRightTopBlack{
+    position: relative;
+    &:before{
+        content: '';
+        width: 140px;
+        display: block;
+        height: 140px;
+        background-image: url(images/stamp.png);
+        background-size: 80%;
+        background-position: center center;
+        background-repeat: no-repeat;
+        position: absolute;
+        background-color: $black;
+        border-radius: 50%;
+        z-index: 2;
+        top: -61px;
+        right: -60px;
+    }
+
+}
+
+.modernImageStampActually{
+    position: relative;
+    &:before{
+        content: '';
+        width: 170px;
+        display: block;
+        height: 170px;
+        background-image: url(images/stamp2.png);
+        background-size: 80%;
+        background-position: center center;
+        background-repeat: no-repeat;
+        position: absolute;
+        z-index: 2;
+        top: -50px;
+        left: -60px;
+        padding: 10px;
+    }
+}
+
+.modernImageStamp{
+    position: relative;
+    &:before{
+        content: '';
+        width: 150px;
+        display: block;
+        height: 150px;
+        background-image: url(images/stamp.png);
+        background-size: 100%;
+        background-position: center center;
+        background-repeat: no-repeat;
+        position: absolute;
+        z-index: 2;
+        top: -50px;
+        left: -60px;
+        background-color: $accent;
+        border-radius: 50%;
+    }
+}
+
+.modernImageStampLogo{
+    &:before{
+    content: '';
+    width: 79px;
+    display: block;
+    height: 79px;
+    background-image: url(images/stamp2.png);
+    background-size: 103%;
+    background-position: center center;
+    background-repeat: no-repeat;
+    position: absolute;
+    z-index: 4;
+    top: 65px;
+    left: 7px;
+    background-color: black;
+    border-radius: 50%;
+    }
+}

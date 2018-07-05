@@ -1,0 +1,55 @@
+main.front-page{
+	.frontpage-slider{
+		width: 100%;
+		max-width: 1900px;
+		margin: 0 auto;
+	}
+	.container{
+		margin: 0 auto;
+		max-width: $max-width;
+		width: 100%;
+	}
+	.frontImage{
+	    height: calc(100vh - 228px);
+	    background-size: contain;
+	    background-repeat: no-repeat;
+	    background-position: center center;
+		img{
+			display: none;
+		}
+	}
+	h2{
+		text-align: center;
+		margin-top: 5px;
+	}
+	p{
+		text-align: justify;
+		text-align-last: center
+	}
+	.btn{
+		display: block;
+	    margin: 60px auto 80px;
+	    width: 200px;
+	}
+}
+
+@media (max-width: 950px) {
+	main.front-page{
+		.container{
+			padding: 0 50px;
+		}
+		.frontImage{
+			background-image: none;
+			height: auto;
+			img { display: block }
+		}
+	}
+}
+
+@media (max-width: 550px) {
+	main.front-page{
+		.container{
+			padding: 0 15px;
+		}
+	}
+}

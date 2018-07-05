@@ -1,0 +1,185 @@
+.twoColumnContainer{
+	display: flex;
+	flex-flow: row nowrap;
+	max-width: $max-width2;
+	margin: 120px auto 100px;
+	#primary{
+		width: 60%;
+		div.formEntry{
+		    width: 100%;
+		    display: block;
+		    margin: 0px 0 25px;
+		    border: 1px solid $white;
+		    label{
+		    	display: flex;
+		    	flex-flow: row nowrap;
+				flex-basis: 0 1 100%;
+				&.stacked{
+					flex-flow: column nowrap;
+					span.label{
+						border-right: none;
+						border-bottom: 1px solid white;
+					}
+				}
+		    }
+		    input, textarea{
+				background: transparent;
+				color: $white;
+				font-family: $normal;
+				width: inherit;
+				display: block;
+				width: 100%;
+				height: 100%;
+				outline: none;
+				border: none;
+				@include fontSize(14);
+				letter-spacing: 1.5px;
+				padding: 10px;
+		    }
+		    .wpcf7-form-control-wrap{
+		    	width: 100%;
+		    }
+		    span.label{
+		    	background: $accent;
+		    	white-space:nowrap;
+			    padding: 15px 40px 15px 25px;
+			    display: block;
+			    border-right: 1px solid white;
+			    flex-shrink: 0;
+		    }
+		    span.wpcf7-not-valid-tip{
+				color: $accent;
+				font-family: $normal;
+				text-transform: initial;
+				@include fontSize(11);
+				position: relative;
+				top: -62px;
+    			left: 5px;
+
+			}
+			input.wpcf7-not-valid{
+				background: $grey;
+			}
+		}
+		div.submit{
+			@include clearfix();
+			width: 100%;
+			margin-bottom: 25px;
+			input{
+				float: right;
+				clear: both;
+				width: 250px;
+				display: block;
+			}
+			.ajax-loader{
+				background-image: url('./ajax-loader.gif') !important;
+				width: 127px;
+			}
+		}
+		div.wpcf7-response-output{
+			text-align: right;
+		    border: none;
+		    background: none;
+			color: $white;
+		    @include fontSize(20);
+		    padding: 0;
+		    margin: 0 0 20px;
+		}
+		div.wpcf7-response-output.wpcf7-mail-sent-ok{
+			// background: $darkGrey;
+		}
+	}
+	#secondary{
+		width: 40%;
+		padding: 55px 20px 0px;
+		border: 1px solid $white;
+    	border-left: none;
+    	text-align: right;
+    	h4{
+    		padding: 70px 0 15px;
+    		text-align: center;
+    	}
+    	h5{
+    		margin:0;
+    		padding: 5px;
+    	}
+    	.sbi_photo_wrap{
+    		border: 1px solid $white;
+    	}
+    	.twoColumnInsta{
+			display: block;
+		}
+		.oneColumnInsta{
+			display: none;
+		}
+		a{
+			text-decoration: none;
+		}
+	}
+
+}
+@media (max-width: 1080px){
+	.twoColumnContainer{
+		flex-flow: column nowrap;
+		align-items: center;
+		#primary, #secondary{
+			width: 80%;
+		}
+		#secondary{
+			border-left: 1px solid $white;
+			border-top: 0;
+		}
+	}
+}
+@media (max-width: 767px){
+	.twoColumnContainer{
+		margin: 70px auto 50px;
+		#primary, #secondary{
+			width: auto;
+	    	margin-left: 15px;
+	    	margin-right: 15px;
+		}
+		#primary{
+			padding: 0 25px;
+		}
+		#secondary{
+			width: calc(100% - 30px);
+			ul{
+				margin: 0;
+			}
+		}
+	}
+}
+@media (max-width: 600px){
+	.twoColumnContainer {
+		#primary {
+			padding: 0px 15px;
+			div.submit input{
+				float: none;
+				margin: 0 auto;
+				width: 100%;
+			}
+			div.formEntry {
+				span.label{
+					padding: 10px;
+					border-bottom: 1px solid $white;
+					border-right: none;
+				}
+				input{
+					padding: 20px 10px;
+				}
+				label{
+					flex-flow: column nowrap;
+				}
+			}
+		}
+		#secondary {
+			.twoColumnInsta{
+				display: none;
+			}
+			.oneColumnInsta{
+				display: block;
+			}
+		}
+	}
+}
